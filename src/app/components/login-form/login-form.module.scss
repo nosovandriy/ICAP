@@ -1,0 +1,117 @@
+@import '@styles/vars.scss';
+@import '@styles/mixins.scss';
+
+.container {
+  @include flex-center-column;
+
+  padding: 50px;
+  width: 400px;
+  height: 450px;
+  background-color: $white;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.titleWrapper {
+  @include flex-center;
+
+  gap: 15px;
+}
+
+.title {
+  font-weight: $font-weight-regular;
+}
+
+.loginForm {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.label {
+  &:last-of-type {
+    display: block;
+    margin-top: 15px;
+  }
+}
+
+.input {
+  margin-top: 4px;
+
+  &__text {
+    @include set-size(100%, 45px);
+
+    padding: 10px 50px 10px 20px;
+    border: 1px solid $gray-3;
+    border-radius: 8px;
+    outline: none;
+    color: $blue-1;
+    font-family: inherit;
+    font-size: $font-size-base;
+    transition-duration: $basic-time;
+
+    &:focus {
+      border-color: $blue-1;
+    }
+
+    &::placeholder {
+      color: $gray-2;
+    }
+    &__error {
+      border-color: $error !important;
+    }
+  }
+
+  &__errorDescription {
+    height: 14px;
+    margin-top: 4px;
+    color: $error;
+    font-size: $font-size-sm;
+  }
+}
+
+.passwordInput {
+  position: relative;
+  width: 100%;
+}
+
+.iconWrapper {
+  @include flex-center-column;
+
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.notValidInfo {
+  @include set-flex(row, space-between, center);
+
+  height: 24px;
+  color: $error;
+}
+
+.button {
+  @include flex-center;
+  @include set-size(100%, 45px);
+
+  gap: 15px;
+
+  margin-top: 14px;
+  border: 1px solid $gray-3;
+  border-radius: 30px;
+  outline: none;
+  color: $white;
+  background-color: $blue-1;
+  transition-duration: $basic-time;
+
+  &:hover {
+    background-color: $blue-2;
+    transition-duration: $basic-time;
+    cursor: pointer;
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+}

@@ -1,0 +1,57 @@
+@import '@styles/vars.scss';
+@import '@styles/mixins.scss';
+
+.action {
+  @include set-flex(row, center, center);
+
+  width: 130px;
+}
+
+.button {
+  @include flex-center;
+
+  padding: 5px;
+  border: 1px solid $blue-2;
+  border-radius: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.editButton {
+  width: 60px;
+
+  &:hover {
+    background-color: $blue-2;
+    color: $white;
+  }
+}
+
+.actionButtons {
+  @include set-flex(row, space-between, center);
+
+  width: 100%;
+}
+
+.saveButton {
+  width: 35px;
+  font-size: $font-size-sm;
+  background-color: $blue-2;
+  color: $white;
+}
+
+.cancelButton {
+  width: 35px;
+  font-size: $font-size-sm;
+}
+
+.editInput {
+  background-color: $blue-2;
+  outline: none;
+  color: $white;
+  display: block;
+  height: 100%;
+  width: max-content;
+  font-size: inherit;
+}

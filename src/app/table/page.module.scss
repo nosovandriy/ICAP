@@ -1,0 +1,46 @@
+@import '@styles/vars.scss';
+@import '@styles/mixins.scss';
+
+.wrapper {
+  @include flex-center-column;
+
+  margin-top: 50px;
+}
+
+.personTable {
+  margin-top: 50px;
+  background-color: $white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+}
+
+.personTable thead tr {
+  background-color: $blue-2;
+  color: $white;
+  text-align: left;
+  font-size: $font-size-lg;
+}
+
+.personTable th,
+.personTable td {
+  padding: 12px 15px;
+  font-weight: $font-weight-regular;
+}
+
+.personTable tbody tr {
+  border-bottom: 1px solid $gray-4;
+}
+
+.personTable tbody tr:nth-child(even) {
+  background-color: $gray-4;
+}
+
+.personTable tbody tr:last-child {
+  border-bottom: 5px solid $blue-2;
+}
+
+.personTable tbody tr:hover {
+  color: $blue-2;
+}

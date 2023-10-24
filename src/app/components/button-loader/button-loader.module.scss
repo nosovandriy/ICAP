@@ -1,0 +1,39 @@
+@import '@styles/mixins.scss';
+@import '@styles/vars.scss';
+
+.wrapper {
+  @include set-flex(column, center, center);
+}
+
+.loader {
+  @include set-square(24px);
+
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 4px solid $white;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  @include set-square(24px);
+
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  border-left: 4px solid $blue-3;
+  border-bottom: 4px solid transparent;
+  animation: rotation 0.5s linear infinite reverse;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
