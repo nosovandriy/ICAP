@@ -1,3 +1,4 @@
+import { Authorization } from '@/types/Login';
 import { TableType } from '@/types/Table';
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
 
